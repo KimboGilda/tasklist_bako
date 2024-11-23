@@ -1,0 +1,12 @@
+<h2><%= @list.title %></h2>
+
+<%= simple_form_for [@list, @task], html: { local: true} do |form| %>
+    <%= form.input :title, label: "Task title" %>
+  <div>
+    <%= form.button :submit, "Create Task" %> 
+  </div>
+<% end %>
+
+<div class="overview">
+<%= link_to "Back to overview", lists_path %>
+</div>
