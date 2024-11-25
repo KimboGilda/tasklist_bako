@@ -1,6 +1,12 @@
 <div class="container">
-<h1>My lists</h1>
-<% @lists.each do |list| %>
-<p><%= link_to list.title, list_path(list) %></p>
-<% end %>
+   <div class="title">
+  <h1>My Lists</h1>
+   </div>
+  <div class="flex-container">
+    <% @lists.each do |list| %>
+      <div class="card">
+        <p><%= link_to list.title, list_path(list) %></p>
+      </div>
+    <% end %>
+  </div>
 </div>
